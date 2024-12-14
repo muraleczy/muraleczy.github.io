@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuraLeczy - O Naszym Projekcie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lora:wght@400;500&family=Poppins:wght@300;400&display=swap');
+        
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f8f1e1; /* Soft warm beige */
+            color: #555;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* Gentle pastel yellow-orange */
+            padding: 30px 0; /* Reduced padding */
+            text-align: center;
+            position: relative;
+        }
+
+        header img.logo {
+            width: 300px;
+            height: auto;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-family: 'Caveat', cursive; /* Elegant, hand-drawn style */
+            color: #6d4f47; /* Soft warm brown */
+            background: linear-gradient(135deg, #f7e4d7, #e9c8a6); /* Subtle gradient */
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .container p {
+            font-size: 1.2em; /* Slightly larger for better readability */
+            font-family: 'Lora', serif; /* Stylish, legible serif font */
+            margin-bottom: 30px;
+            background: #ffffff; /* Light clean white */
+            padding: 20px 25px; /* Adjusted for a comfortable text area */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4a4a4a; /* Softer gray for better contrast */
+            line-height: 1.8; /* More space between lines for a clean look */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 260px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* Matching gradient for footer */
+            padding: 15px 0; /* Slightly more padding */
+            text-align: center;
+            color: #3b3b3b; /* Darker for better contrast */
+            margin-top: 30px;
+            font-family: 'Poppins', sans-serif; /* Clean and modern font */
+            font-size: 1em;
+            border-top: 2px solid #f4a261;
+            letter-spacing: 0.5px; /* Slightly spaced out for a polished look */
+        }
+
+        footer span {
+            color: #3b6146; /* Title color for emphasis */
+            font-weight: 500; /* Slightly bolder for contrast */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="MuraLeczy Logo" class="logo">
+		<p></p>
+        <h2>O Naszym Projekcie</h2>
+    </header>
+
+    <div class="container">
+        <p>
+           Dzięki muralom świat staje się bardziej kolorowy, poprawia samopoczucie, a nawet i leczy. 
+           Właśnie dlatego tworzymy mural na ścianie oddziału dziecięcego, żeby mogły przemierzać świat wyobraźni 
+           i na chwilę zapomnieć o cierpieniu. Chcemy dać dzieciom siłę do walki z chorobą!
+        </p>
+
+        <div class="gallery">
+            <img src="grafika1.jpg" alt="Projekt graficzny 1" />
+            <img src="grafika2.jpg" alt="Projekt graficzny 2" />
+            <img src="grafika3.jpg" alt="Projekt graficzny 3" />
+            <img src="grafika4.jpg" alt="Projekt graficzny 4" />
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 <span>MuraLeczy</span></p>
+    </footer>
+</body>
+</html>
