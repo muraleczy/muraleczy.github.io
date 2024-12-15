@@ -5,22 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MuraLeczy - O Naszym Projekcie</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lora:wght@400;500&family=Poppins:wght@300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
         
         body {
-            font-family: "Arial", sans-serif;
-            background-color: #f8f1e1; /* beżowy */
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8f1e1; 
             color: #555;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
-        header {
-            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* żółty-pomarańczowy */
-            padding: 30px 0; 
-            text-align: center;
+        nav {
+            background-color: #8fa5a2; 
+            padding: 10px 0;
             position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f8f1e1;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #a5c0b9; 
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
         }
 
         header img.logo {
@@ -31,12 +63,11 @@
         header h2 {
             font-size: 1.5em;
             margin-top: 10px;
-            font-family: 'Caveat', cursive; 
-            color: #6d4f47; /* Soft warm brown */
+            color: #6d4f47;
             background: linear-gradient(135deg, #f7e4d7, #e9c8a6);
-            display: inline-block;
             padding: 5px 15px;
             border-radius: 8px;
+            display: inline-block;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -48,22 +79,32 @@
         }
 
         .container p {
-            font-size: 1.2em;
-            font-family: 'Lora', serif; 
+            font-size: 1.1em;
             margin-bottom: 30px;
-            background: #ffffff; 
-            padding: 20px 25px; 
+            background: #ffffff;
+            padding: 15px 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: justify;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            color: #4a4a4a; 
-            line-height: 1.8; 
         }
 
-        .gallery {
+        footer {
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
+            padding: 10px 0;
+            text-align: center;
+            color: #555;
+            margin-top: 30px;
+            font-size: 0.9em;
+            border-top: 2px solid #f4a261;
+        }
+
+        footer span {
+            color: #3b6146;
+        }
+		        .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -82,23 +123,6 @@
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-
-        footer {
-            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); 
-            padding: 15px 0; 
-            text-align: center;
-            color: #3b3b3b; 
-            margin-top: 30px;
-            font-family: 'Poppins', sans-serif; 
-            font-size: 1em;
-            border-top: 2px solid #f4a261;
-            letter-spacing: 0.5px; 
-        }
-
-        footer span {
-            color: #3b6146; 
-            font-weight: 500; 
-        }
     </style>
 </head>
 <body>
@@ -108,20 +132,29 @@
         <h2>O Naszym Projekcie</h2>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="kim-jestesmy.html">Kim jesteśmy</a></li>
+            <li><a href="nasze-doswiadczenie.html">Nasze doświadczenie</a></li>
+            <li><a href="sponsorzy.html">Sponsorzy oraz partnerzy</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="merch.html">Zakup nasz merch!</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <p>
            Dzięki muralom świat staje się bardziej kolorowy, poprawia samopoczucie, a nawet i leczy. 
            Właśnie dlatego tworzymy mural na ścianie oddziału dziecięcego, żeby mogły przemierzać świat wyobraźni 
            i na chwilę zapomnieć o cierpieniu. Chcemy dać dzieciom siłę do walki z chorobą!
         </p>
-
-        <div class="gallery">
+    </div>
+	 <div class="gallery">
             <img src="grafika1.jpg" alt="Projekt graficzny 1" />
             <img src="grafika2.jpg" alt="Projekt graficzny 2" />
             <img src="grafika3.jpg" alt="Projekt graficzny 3" />
             <img src="grafika4.jpg" alt="Projekt graficzny 4" />
         </div>
-    </div>
 
     <footer>
         <p>2024 <span>MuraLeczy</span></p>
