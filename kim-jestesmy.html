@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Jesteśmy - MuraLeczy</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
         body {
- font-family: 'Raleway', sans-serif; 
-            background-color: #f8f1e1; /* Soft warm beige */
+            font-family: 'Raleway', sans-serif;
+            background-color: #f8f1e1;
             color: #555;
             margin: 0;
             padding: 0;
@@ -17,21 +17,20 @@
         }
 
         header {
-            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* Gentle pastel yellow-orange */
-            padding: 30px 0; 
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
+            padding: 30px 0;
             text-align: center;
         }
-		
-		header img.logo {
+
+        header img.logo {
             width: 300px;
             height: auto;
         }
 
         header h2 {
             font-size: 2em;
-            font-family: 'Caveat', cursive; /* Elegant, hand-drawn style */
-            color: #6d4f47; /* Soft warm brown */
-            background: linear-gradient(135deg, #f7e4d7, #e9c8a6); /* Subtle gradient */
+            color: #6d4f47;
+            background: linear-gradient(135deg, #f7e4d7, #e9c8a6);
             display: inline-block;
             padding: 10px 20px;
             border-radius: 12px;
@@ -40,51 +39,56 @@
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 30px auto;
         }
 
         .member {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .member button {
+            width: 100%;
+            text-align: left;
+            background-color: #8fa5a2;
+            color: #f8f1e1;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
             border-radius: 10px;
-            background: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        .member button:hover {
+            background-color: #a5c0b9;
+        }
+
+        .member-content {
+            display: none;
+            margin-top: 10px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .member:nth-child(even) {
-            flex-direction: row-reverse;
+        .member-content img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
-        .member img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            margin: 0 20px;
-        }
-
-        .member .info {
-            flex: 1;
-            text-align: left;
-        }
-
-        .member .info h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #3b6146; /* Warm green title */
-        }
-
-        .member .info p {
+        .member-content p {
             font-size: 1.1em;
             text-align: justify;
         }
 
         footer {
-            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* Matching gradient for footer */
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
             padding: 10px 0;
             text-align: center;
             color: #555;
@@ -94,52 +98,60 @@
         }
 
         footer span {
-            color: #3b6146; /* Title color for emphasis */
+            color: #3b6146;
         }
     </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" || content.style.display === "" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <header>
-	        <img src="logo.png" alt="MuraLeczy Logo" class="logo">
-			<p></p>
+        <img src="logo.png" alt="MuraLeczy Logo" class="logo">
         <h2>Kim Jesteśmy</h2>
     </header>
 
     <div class="container">
         <!-- Janina -->
         <div class="member">
-            <img src="images/janina.jpg" alt="Janina Barcz- liderka projektu">
-            <div class="info">
-                <h3>Janina Barcz</h3>
-                <p> Liderka projektu, której inicjatywa oraz talent plastyczny nadają projektowi wyjątkowy charakter. Odpowiada za planowanie i tworzenie projektów, w tym przygotowanie muralu w szczecińskiej Klinice Świętego Mikołaja. 
-		</p> <P></P> <P>Oprócz wyzwań natury artystycznej, Janina zajmuje się również zarządzaniem zespołem, przydzielając zadania oraz dzieląc się wsparciem. Dzięki jej trosce o pozytywny wizerunek grupy projekt MuraLeczy staje się inspirującą inicjatywą, która nie tylko upiększa przestrzeń, ale także niesie radość innym.</p>
+            <button onclick="toggleContent('janina')">Janina Barcz - Liderka Projektu</button>
+            <div class="member-content" id="janina">
+                <img src="images/janina.jpg" alt="Janina Barcz">
+                <p>
+                    Liderka projektu, której inicjatywa oraz talent plastyczny nadają projektowi wyjątkowy charakter.
+                    Odpowiada za planowanie i tworzenie projektów, w tym przygotowanie muralu w szczecińskiej Klinice Świętego Mikołaja.
+                    Oprócz wyzwań natury artystycznej, Janina zajmuje się zarządzaniem zespołem oraz dbaniem o pozytywny wizerunek grupy.
+                </p>
             </div>
         </div>
 
         <!-- Ewa -->
         <div class="member">
-            <img src="images/ewa.jpg" alt="Ewa - Communication Expert">
-            <div class="info">
-                <h3>Ewa</h3>
-                <p>Ekspertka ds. komunikacji. Opis Ewy znajdzie się tutaj...</p>
+            <button onclick="toggleContent('ewa')">Ewa - Ekspertka ds. Komunikacji</button>
+            <div class="member-content" id="ewa">
+                <img src="images/ewa.jpg" alt="Ewa">
+                <p>Ewa zajmuje się komunikacją, budując relacje z partnerami i sponsorami oraz dbając o efektywną współpracę w zespole.</p>
             </div>
         </div>
 
         <!-- Alicja -->
         <div class="member">
-            <img src="images/alicja.jpg" alt="Alicja - Social Media Expert">
-            <div class="info">
-                <h3>Alicja</h3>
-                <p>Ekspertka ds. social media. Opis Alicji znajdzie się tutaj...</p>
+            <button onclick="toggleContent('alicja')">Alicja - Ekspertka ds. Social Media</button>
+            <div class="member-content" id="alicja">
+                <img src="images/alicja.jpg" alt="Alicja">
+                <p>Alicja zarządza mediami społecznościowymi projektu, promując nasze działania i angażując społeczność.</p>
             </div>
         </div>
 
         <!-- Hania -->
         <div class="member">
-            <img src="images/hania.jpg" alt="Hania - Research Expert">
-            <div class="info">
-                <h3>Hania</h3>
-                <p>Ekspertka ds. badań. Opis Hani znajdzie się tutaj...</p>
+            <button onclick="toggleContent('hania')">Hania - Ekspertka ds. Badań</button>
+            <div class="member-content" id="hania">
+                <img src="images/hania.jpg" alt="Hania">
+                <p>Hania prowadzi badania, zbierając dane, które pomagają kształtować strategię i rozwój projektu.</p>
             </div>
         </div>
     </div>
