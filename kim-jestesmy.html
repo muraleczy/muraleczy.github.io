@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Jesteśmy - MuraLeczy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f8f1e1; /* Soft warm beige */
+            color: #555;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* Gentle pastel yellow-orange */
+            padding: 30px 0; 
+            text-align: center;
+        }
+		
+		header img.logo {
+            width: 300px;
+            height: auto;
+        }
+
+        header h2 {
+            font-size: 2em;
+            font-family: 'Caveat', cursive; /* Elegant, hand-drawn style */
+            color: #6d4f47; /* Soft warm brown */
+            background: linear-gradient(135deg, #f7e4d7, #e9c8a6); /* Subtle gradient */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .member:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: 0 20px;
+        }
+
+        .member .info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .member .info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #3b6146; /* Warm green title */
+        }
+
+        .member .info p {
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5); /* Matching gradient for footer */
+            padding: 10px 0;
+            text-align: center;
+            color: #555;
+            margin-top: 30px;
+            font-size: 0.9em;
+            border-top: 2px solid #f4a261;
+        }
+
+        footer span {
+            color: #3b6146; /* Title color for emphasis */
+        }
+    </style>
+</head>
+<body>
+    <header>
+	        <img src="logo.png" alt="MuraLeczy Logo" class="logo">
+			<p></p>
+        <h2>Kim Jesteśmy</h2>
+    </header>
+
+    <div class="container">
+        <!-- Janina -->
+        <div class="member">
+            <img src="images/janina.jpg" alt="Janina - Leader">
+            <div class="info">
+                <h3>Janina</h3>
+                <p>Liderka projektu. Opis Janiny znajdzie się tutaj...</p>
+            </div>
+        </div>
+
+        <!-- Ewa -->
+        <div class="member">
+            <img src="images/ewa.jpg" alt="Ewa - Communication Expert">
+            <div class="info">
+                <h3>Ewa</h3>
+                <p>Ekspertka ds. komunikacji. Opis Ewy znajdzie się tutaj...</p>
+            </div>
+        </div>
+
+        <!-- Alicja -->
+        <div class="member">
+            <img src="images/alicja.jpg" alt="Alicja - Social Media Expert">
+            <div class="info">
+                <h3>Alicja</h3>
+                <p>Ekspertka ds. social media. Opis Alicji znajdzie się tutaj...</p>
+            </div>
+        </div>
+
+        <!-- Hania -->
+        <div class="member">
+            <img src="images/hania.jpg" alt="Hania - Research Expert">
+            <div class="info">
+                <h3>Hania</h3>
+                <p>Ekspertka ds. badań. Opis Hani znajdzie się tutaj...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 <span>MuraLeczy</span></p>
+    </footer>
+</body>
+</html>
