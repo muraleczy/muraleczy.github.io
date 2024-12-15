@@ -16,22 +16,27 @@
             line-height: 1.6;
         }
 
-        header {
-            background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
-            padding: 30px 0;
+         header {
             text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
+        }
+
+        header img.logo {
+            width: 300px;
+            height: auto;
         }
 
         header h2 {
-            font-size: 2em;
+            font-size: 1.5em;
+            margin-top: 10px;
             color: #6d4f47;
             background: linear-gradient(135deg, #f7e4d7, #e9c8a6);
+            padding: 5px 15px;
+            border-radius: 8px;
             display: inline-block;
-            padding: 10px 20px;
-            border-radius: 12px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .container {
             width: 90%;
             max-width: 1200px;
@@ -146,7 +151,9 @@
 </head>
 <body>
     <header>
-        <h2>Kim Jesteśmy</h2>
+        <img src="logo.png" alt="MuraLeczy Logo" class="logo">
+	    <p></p>
+        <h2>Kim jesteśmy</h2>
     </header>
 
     <div class="container">
@@ -160,8 +167,8 @@
                 <button onclick="hideDescription('janina')">Zamknij</button>
                 <h3>Janina Barcz - Liderka projektu</h3>
                 <p>
-                    Janina Barcz tworzy modele i projekty artystyczne. Ma wieloletnie doświadczenie w dziedzinie sztuki. 
-                    Zajmuje się opieką nad zespołem i jest jego główną przedstawicielką.
+                    Janina Barcz tworzy i sprawuje opiekę nad projektami artystycznymi. Ma szerokie doświadczenie w dziedzinie sztuki. 
+                    Zajmuje się podziałem pracy w zespole i jest jego główną przedstawicielką.
                 </p>
             </div>
         </div>
