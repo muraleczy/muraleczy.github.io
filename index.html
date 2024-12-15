@@ -9,7 +9,7 @@
         
         body {
             font-family: 'Nunito', sans-serif;
-            background-color: #f8f1e1; 
+            background-color: #f8f1e1;
             color: #555;
             margin: 0;
             padding: 0;
@@ -17,10 +17,21 @@
         }
 
         nav {
-            background-color: #8fa5a2; 
+            background-color: #8fa5a2;
             padding: 10px 0;
             position: relative;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            background-color: #8fa5a2;
+            color: #f8f1e1;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: left;
         }
 
         nav ul {
@@ -46,7 +57,7 @@
         }
 
         nav ul li a:hover {
-            background-color: #a5c0b9; 
+            background-color: #a5c0b9;
         }
 
         header {
@@ -104,7 +115,8 @@
         footer span {
             color: #3b6146;
         }
-		        .gallery {
+
+        .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -123,16 +135,36 @@
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+                text-align: center;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="logo.png" alt="MuraLeczy Logo" class="logo">
-		<p></p>
+	    <p></p>
         <h2>O Naszym Projekcie</h2>
     </header>
 
     <nav>
+        <button class="menu-toggle">☰ Menu</button>
         <ul>
             <li><a href="kim-jestesmy.html">Kim jesteśmy</a></li>
             <li><a href="nasze-doswiadczenie.html">Nasze doświadczenie</a></li>
@@ -149,15 +181,25 @@
            i na chwilę zapomnieć o cierpieniu. Chcemy dać dzieciom siłę do walki z chorobą!
         </p>
     </div>
-	 <div class="gallery">
-            <img src="grafika1.jpg" alt="Projekt graficzny 1" />
-            <img src="grafika2.jpg" alt="Projekt graficzny 2" />
-            <img src="grafika3.jpg" alt="Projekt graficzny 3" />
-            <img src="grafika4.jpg" alt="Projekt graficzny 4" />
-        </div>
+
+    <div class="gallery">
+        <img src="grafika1.jpg" alt="Projekt graficzny 1" />
+        <img src="grafika2.jpg" alt="Projekt graficzny 2" />
+        <img src="grafika3.jpg" alt="Projekt graficzny 3" />
+        <img src="grafika4.jpg" alt="Projekt graficzny 4" />
+    </div>
 
     <footer>
         <p>2024 <span>MuraLeczy</span></p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
