@@ -5,33 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Jesteśmy - MuraLeczy</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: #f8f1e1; /* Soft beige background */
+            background-color: #f8f1e1;
             color: #555;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         header {
-            text-align: center;
-            padding: 20px 0;
             background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
+            padding: 30px 0;
+            text-align: center;
         }
 
         header h2 {
             font-size: 2em;
-            color: #6d4f47; /* Soft warm brown */
+            color: #6d4f47;
             background: linear-gradient(135deg, #f7e4d7, #e9c8a6);
+            display: inline-block;
             padding: 10px 20px;
             border-radius: 12px;
-            display: inline-block;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-	            footer {
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .member h3 {
+            font-size: 1.4em;
+            color: #3b6146;
+            margin-bottom: 5px;
+        }
+
+        .member .role {
+            font-size: 1em;
+            color: #8fa5a2;
+            margin-bottom: 15px;
+        }
+
+        .member button {
+            background-color: #8fa5a2;
+            color: #f8f1e1;
+            font-size: 1em;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .member button:hover {
+            background-color: #a5c0b9;
+        }
+
+        .description-box {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .description-box h3 {
+            margin-top: 0;
+        }
+
+        .description-box button {
+            background-color: #6d4f47;
+            color: #f8f1e1;
+            font-size: 1em;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .description-box button:hover {
+            background-color: #8c5e52;
+        }
+
+	        footer {
             background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
             padding: 10px 0;
             text-align: center;
@@ -44,165 +133,88 @@
         footer span {
             color: #3b6146;
         }
-
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 30px auto;
-        }
-
-        .member {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .member img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .member h3 {
-            font-size: 1.5em;
-            color: #3b6146; /* Soft green for names */
-            margin: 10px 0;
-        }
-
-        .member button {
-            background-color: #f4c0a5; /* Button color from main page */
-            border: none;
-            color: #6d4f47;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .member button:hover {
-            background-color: #e9c8a6; /* Slightly darker hover effect */
-        }
-
-        .description-box {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-
-        .description-box p {
-            max-width: 900px;
-            margin: 50px auto;
-            font-size: 1.2em;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .close-btn {
-            background-color: #f4c0a5;
-            color: #6d4f47;
-            border: none;
-            font-size: 1em;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            display: block;
-            margin: 20px auto;
-        }
-
-        .close-btn:hover {
-            background-color: #e9c8a6;
-        }
-
-		header img.logo {
-            width: 300px;
-            height: auto;
-        }
-		        
-		header h2 {
-            font-size: 1.5em;
-            margin-top: 10px;
-            color: #6d4f47;
-            background: linear-gradient(135deg, #f7e4d7, #e9c8a6);
-            padding: 5px 15px;
-            border-radius: 8px;
-            display: inline-block;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
     </style>
+    <script>
+        function showDescription(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function hideDescription(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="MuraLeczy Logo" class="logo">
-		<p></p>
-        <h2>Kim jesteśmy</h2>
+        <h2>Kim Jesteśmy</h2>
     </header>
 
     <div class="container">
+        <!-- Janina -->
         <div class="member">
-            <img src="images/janina.jpg" alt="Janina Barcz - liderka projektu">
+            <img src="images/janina.jpg" alt="Janina Barcz">
             <h3>Janina Barcz</h3>
+            <div class="role">Liderka projektu</div>
             <button onclick="showDescription('janina')">Więcej informacji</button>
+            <div id="janina" class="description-box">
+                <button onclick="hideDescription('janina')">Zamknij</button>
+                <h3>Janina Barcz - Liderka projektu</h3>
+                <p>
+                    Janina Barcz tworzy modele i projekty artystyczne. Ma wieloletnie doświadczenie w dziedzinie sztuki. 
+                    Zajmuje się opieką nad zespołem i jest jego główną przedstawicielką.
+                </p>
+            </div>
         </div>
-        <div class="member">
-            <img src="images/ewa.jpg" alt="Ewa - Ekspertka ds. komunikacji">
-            <h3>Ewa</h3>
-            <button onclick="showDescription('ewa')">Więcej informacji</button>
-        </div>
-        <div class="member">
-            <img src="images/alicja.jpg" alt="Alicja - Ekspertka ds. social media">
-            <h3>Alicja</h3>
-            <button onclick="showDescription('alicja')">Więcej informacji</button>
-        </div>
-        <div class="member">
-            <img src="images/hania.jpg" alt="Hania - Ekspertka ds. badań">
-            <h3>Hania</h3>
-            <button onclick="showDescription('hania')">Więcej informacji</button>
-        </div>
-    </div>
 
-    <div id="janina" class="description-box">
-        <p>Janina Barcz to liderka projektu, której talent plastyczny i zaangażowanie nadają unikalny charakter muralowi...</p>
-        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
-    </div>
-    <div id="ewa" class="description-box">
-        <p>Ewa jest ekspertką ds. komunikacji, odpowiedzialną za budowanie relacji z partnerami i mediami...</p>
-        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
-    </div>
-    <div id="alicja" class="description-box">
-        <p>Alicja to ekspertka ds. social media, która tworzy strategie online, zwiększając zasięgi projektu...</p>
-        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
-    </div>
-    <div id="hania" class="description-box">
-        <p>Hania zajmuje się badaniami i analizą, aby projekt był jak najbardziej dostosowany do potrzeb odbiorców...</p>
-        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
-    </div>
-    <footer>
+        <!-- Ewa -->
+        <div class="member">
+            <img src="images/ewa.jpg" alt="Ewa Domagała">
+            <h3>Ewa Domagała</h3>
+            <div class="role">Ekspertka ds. komunikacji</div>
+            <button onclick="showDescription('ewa')">Więcej informacji</button>
+            <div id="ewa" class="description-box">
+                <button onclick="hideDescription('ewa')">Zamknij</button>
+                <h3>Ewa Domagała - Ekspertka ds. komunikacji</h3>
+                <p>
+                    Ewa odpowiada za komunikację z sponsorami i partnerami. Tworzy e-maile, dokumentację i 
+                    reprezentuje zespół w kontaktach zewnętrznych.
+                </p>
+            </div>
+        </div>
+
+        <!-- Alicja -->
+        <div class="member">
+            <img src="images/alicja.jpg" alt="Alicja Krakowiak">
+            <h3>Alicja Krakowiak</h3>
+            <div class="role">Ekspertka ds. social media</div>
+            <button onclick="showDescription('alicja')">Więcej informacji</button>
+            <div id="alicja" class="description-box">
+                <button onclick="hideDescription('alicja')">Zamknij</button>
+                <h3>Alicja Krakowiak - Ekspertka ds. social media</h3>
+                <p>
+                    Alicja tworzy posty online, projekty graficzne i dba o wizerunek zespołu w Internecie. 
+                    Odpowiada również za materiały filmowe związane z projektem.
+                </p>
+            </div>
+        </div>
+
+        <!-- Hania -->
+        <div class="member">
+            <img src="images/hania.jpg" alt="Hania Uska">
+            <h3>Hania Uska</h3>
+            <div class="role">Ekspertka ds. badań</div>
+            <button onclick="showDescription('hania')">Więcej informacji</button>
+            <div id="hania" class="description-box">
+                <button onclick="hideDescription('hania')">Zamknij</button>
+                <h3>Hania Uska - Ekspertka ds. badań</h3>
+                <p>
+                    Hania poszukuje sponsorów i partnerów, analizując możliwości rozwoju projektu i jego ekspansji.
+                </p>
+            </div>
+        </div>
+	        <footer>
         <p>2024 <span>MuraLeczy</span></p>
     </footer>
-    <script>
-        function showDescription(id) {
-            document.getElementById(id).style.display = 'block';
-        }
-
-        function hideDescription() {
-            document.querySelectorAll('.description-box').forEach(box => box.style.display = 'none');
-        }
-    </script>
+    </div>
 </body>
 </html>
