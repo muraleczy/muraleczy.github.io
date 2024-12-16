@@ -16,7 +16,7 @@
             line-height: 1.6;
         }
 
-         header {
+        header {
             text-align: center;
             padding: 30px 0;
             background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
@@ -37,6 +37,24 @@
             display: inline-block;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .return-button {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #8fa5a2;
+            color: #f8f1e1;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #a5c0b9;
+        }
+
         .container {
             width: 90%;
             max-width: 1200px;
@@ -63,11 +81,10 @@
             margin-bottom: 15px;
         }
 
-        .member h3 {
-            font-size: 1.4em;
-            color: #f8f1e1;
+        .member h2 {
+            font-size: 1.5em;
+            color: #555;
             margin-bottom: 5px;
-	align-items: center;
         }
 
         .member .role {
@@ -126,7 +143,7 @@
             background-color: #8c5e52;
         }
 
-	        footer {
+        footer {
             background: linear-gradient(135deg, #f9d8a2, #f4c0a5);
             padding: 10px 0;
             text-align: center;
@@ -138,11 +155,6 @@
 
         footer span {
             color: #3b6146;
-        }
-
-	        .member h2 {
-            font-size: 1.5em;
-            margin: 10px 0;
         }
     </style>
     <script>
@@ -158,76 +170,55 @@
 <body>
     <header>
         <img src="logo.png" alt="MuraLeczy Logo" class="logo">
-	    <p></p>
+		<p></p>
         <h2>Kim jesteśmy</h2>
+        <a href="index.html" class="return-button">Powrót na główną stronę</a>
     </header>
 
     <div class="container">
-        <!-- Janina -->
+   <div class="container">
         <div class="member">
-            <img src="janina.jpg" alt="Janina Barcz">
-            <h2>Janina Barcz</h2>
-            <div class="role">Liderka projektu</div>
+            <img src="images/janina.jpg" alt="Janina Barcz - liderka projektu">
+            <h3>Janina Barcz</h3>
             <button onclick="showDescription('janina')">Więcej informacji</button>
-            <div id="janina" class="description-box">
-                <button onclick="hideDescription('janina')">X</button>
-                <h3>Janina Barcz - Liderka projektu</h3>
-                <p>
-                    Janina Barcz tworzy i sprawuje opiekę nad projektami artystycznymi. Ma szerokie doświadczenie w dziedzinie sztuki. 
-                    Zajmuje się podziałem pracy w zespole i jest jego główną przedstawicielką.
-                </p>
-            </div>
         </div>
-
-        <!-- Ewa -->
         <div class="member">
-            <img src="ewa.jpg" alt="Ewa Domagała">
-            <h2>Ewa Domagała</h2>
-            <div class="role">Ekspertka ds. komunikacji</div>
+            <img src="images/ewa.jpg" alt="Ewa - Ekspertka ds. komunikacji">
+            <h3>Ewa</h3>
             <button onclick="showDescription('ewa')">Więcej informacji</button>
-            <div id="ewa" class="description-box">
-                <button onclick="hideDescription('ewa')">X</button>
-                <h3>Ewa Domagała - Ekspertka ds. komunikacji</h3>
-                <p>
-                    Ewa odpowiada za komunikację z sponsorami i partnerami. Tworzy e-maile, dokumentację i 
-                    reprezentuje projekt w kontaktach zewnętrznych. Chętnie wspiera zespół także w kwestiach informatycznych.
-                </p>
-            </div>
         </div>
-
-        <!-- Alicja -->
         <div class="member">
-            <img src="alicja.jpg" alt="Alicja Krakowiak">
-            <h2>Alicja Krakowiak</h2>
-            <div class="role">Ekspertka ds. social media</div>
+            <img src="images/alicja.jpg" alt="Alicja - Ekspertka ds. social media">
+            <h3>Alicja</h3>
             <button onclick="showDescription('alicja')">Więcej informacji</button>
-            <div id="alicja" class="description-box">
-                <button onclick="hideDescription('alicja')">X</button>
-                <h3>Alicja Krakowiak - Ekspertka ds. social media</h3>
-                <p>
-                    Alicja tworzy posty online, projekty graficzne i dba o wizerunek zespołu w Internecie. 
-                    Odpowiada również za materiały filmowe związane z projektem.
-                </p>
-            </div>
         </div>
-
-        <!-- Hania -->
         <div class="member">
-            <img src="hania.jpg" alt="Hanna Uscka">
-            <h2>Hanna Uscka</h2>
-            <div class="role">Ekspertka ds. badań</div>
+            <img src="images/hania.jpg" alt="Hania - Ekspertka ds. badań">
+            <h3>Hania</h3>
             <button onclick="showDescription('hania')">Więcej informacji</button>
-            <div id="hania" class="description-box">
-                <button onclick="hideDescription('hania')">X</button>
-                <h3>Hanna Uscka - Ekspertka ds. badań</h3>
-                <p>
-                    Hanna poszukuje sponsorów i partnerów, analizując możliwości rozwoju projektu i jego ekspansji.
-                </p>
-            </div>
         </div>
-	        <footer>
+    </div>
+
+    <div id="janina" class="description-box">
+        <p>Janina Barcz to liderka projektu, której talent plastyczny i zaangażowanie nadają unikalny charakter muralowi...</p>
+        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
+    </div>
+    <div id="ewa" class="description-box">
+        <p>Ewa jest ekspertką ds. komunikacji, odpowiedzialną za budowanie relacji z partnerami i mediami...</p>
+        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
+    </div>
+    <div id="alicja" class="description-box">
+        <p>Alicja to ekspertka ds. social media, która tworzy strategie online, zwiększając zasięgi projektu...</p>
+        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
+    </div>
+    <div id="hania" class="description-box">
+        <p>Hania zajmuje się badaniami i analizą, aby projekt był jak najbardziej dostosowany do potrzeb odbiorców...</p>
+        <button class="close-btn" onclick="hideDescription()">Zamknij</button>
+    </div>
+    </div>
+
+    <footer>
         <p>2024 <span>MuraLeczy</span></p>
     </footer>
-    </div>
 </body>
 </html>
