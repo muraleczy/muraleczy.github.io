@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsorzy i Partnerzy - MuraLeczy</title>
-    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style.css">
     <style>
-                   nav {
+                  nav {
             background-color: #8fa5a2;
             padding: 10px 0;
             position: relative;
@@ -74,28 +74,6 @@
             gap: 20px;
         }
 
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #8fa5a2;
-            color: #fff;
-        }
-
-        header img.logo {
-            width: 200px; 
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 30px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
         .member {
             background: #ffffff;
             padding: 20px;
@@ -106,10 +84,15 @@
         }
 
         .member img {
-            width: 80%;
+            width: 40%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .member img:hover {
+            transform: scale(1.05);
         }
 
         .member h2 {
@@ -117,13 +100,21 @@
             color: #6d4f47;
         }
 
+        .role {
+            margin: 10px 0;
+            color: #555;
+        }
+
         .member button {
             background-color: #8fa5a2;
-            color: #fff;
+            color: #f8f1e1;
             padding: 8px 15px;
+            font-size: 1em;
             border: none;
             border-radius: 8px;
             cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
 
         .member button:hover {
@@ -150,16 +141,20 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #fff;
+            background-color: #f8f1e1;
             color: #555;
             border: none;
-            padding: 5px 10px;
             font-size: 1.2em;
+            padding: 5px 10px;
             cursor: pointer;
             border-radius: 50%;
+            transition: background-color 0.3s ease;
         }
 
-        .description-box a {
+        .description-box button:hover {
+            background-color: #f4c0a5;
+        }
+	    .description-box a {
             color: #f4c0a5;
             text-decoration: none;
             font-weight: bold;
@@ -183,9 +178,11 @@
 <body>
     <header>
         <img src="logo.png" alt="MuraLeczy Logo" class="logo">
+        <p></p>
         <h2>Sponsorzy i Partnerzy</h2>
+        <p></p>
     </header>
-    <nav>
+  <nav>
         <button class="menu-toggle">☰ Menu</button>
         <ul>
             <li><a href="muraleczy.github.io">Strona Główna</a></li>
@@ -198,17 +195,62 @@
     <div class="container">
         <!-- Partner 1 -->
         <div class="member">
-            <img src="logoszpital.png" alt="Samodzielny Publiczny Szpital Kliniczny Nr 1">
+            <img src="logoszpital.png" alt="Samodzielny Publiczny Szpital Kliniczny Nr 1 im. prof. Tadeusza Sokołowskiego Pomorskiego Uniwersytetu Medycznego w Szczecinie">
             <h2>Klinika Świętego Mikołaja w Szczecinie</h2>
             <div class="role">Klinika Pediatrii, Hematologii i Onkologii Dziecięcej.</div>
             <button onclick="showDescription('partner1')">Zobacz więcej</button>
             <div id="partner1" class="description-box">
                 <button onclick="hideDescription('partner1')">X</button>
                 <h3>Klinika Świętego Mikołaja w Szczecinie</h3>
-                <p>Unia Lubelska 1, 71-252 Szczecin, woj. zachodniopomorskie</p>
-                <a href="https://usk1.szczecin.pl/jednostki-medyczne/szczecin-ul-unii-lubelskiej-1/kl-pediatrii-hemato-onkologii-i-gastroenterologii-dzieciecej" target="_blank">Strona Internetowa Kliniki</a>
+                <p>
+                 Unii Lubelskiej 1 </p>
+		<p></p>71-252 Szczecin </p>
+	<p>woj. zachodniopomorskie
+                </p>
+		    <a href= https://usk1.szczecin.pl/jednostki-medyczne/szczecin-ul-unii-lubelskiej-1/kl-pediatrii-hemato-onkologii-i-gastroenterologii-dzieciecej> Strona Internetowa Kliniki</a>
+            </div>
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="member">
+            <img src="partner2.jpg" alt="Partner 2">
+            <h2>Partner 2</h2>
+            <div class="role">Opis krótki partnera</div>
+            <button onclick="showDescription('partner2')">Zobacz więcej</button>
+            <div id="partner2" class="description-box">
+                <button onclick="hideDescription('partner2')">X</button>
+                <h3>Partner 2</h3>
+                <p>
+                  pełny opis
+                </p>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>2024 <span>MuraLeczy</span></p>
+    </footer>
+	 <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+	    function openModal(img) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const captionText = document.getElementById('caption');
+
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+}
+		  </script>
 </body>
 </html>
