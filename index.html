@@ -180,125 +180,16 @@
         </p>
     </div>
 
-<style>
-    .timeline-horizontal {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-        position: relative;
-        margin: 50px auto;
-        width: 80%;
-    }
-
-    .timeline-horizontal::before {
-        content: '';
-        position: absolute;
-        width: 4px;
-        height: 100%;
-        background-color: #8fa5a2;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .timeline-item {
-        position: relative;
-        width: 200px;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        animation: fadeIn 0.5s ease-out;
-    }
-
-    .timeline-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .timeline-item:hover {
-        transform: scale(1.1);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .timeline-item.left {
-        transform: translateX(-100%);
-    }
-
-    .timeline-item.right {
-        transform: translateX(100%);
-    }
-
-    .timeline-item.vertical {
-        transform: translateY(100%);
-    }
-
-    .timeline-line {
-        position: absolute;
-        background-color: #8fa5a2;
-    }
-
-    .timeline-line.horizontal {
-        height: 4px;
-        width: calc(100% + 40px);
-        top: 50%;
-        left: -20px;
-    }
-
-    .timeline-line.vertical {
-        width: 4px;
-        height: calc(100% + 40px);
-        left: 50%;
-        top: -20px;
-        transform: translateX(-50%);
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-</style>
-
-<div class="timeline-horizontal">
-    <div class="timeline-item left">
-        <img src="grafika6.jpg" alt="Projekt graficzny 8" onclick="openModal(this)" />
-        <div class="timeline-line horizontal"></div>
-    </div>
-    <div class="timeline-item right">
-        <img src="grafika5.jpg" alt="Projekt graficzny 7" onclick="openModal(this)" />
-        <div class="timeline-line vertical"></div>
-    </div>
-    <div class="timeline-item right">
-        <img src="grafika4.jpg" alt="Projekt graficzny 6" onclick="openModal(this)" />
-        <div class="timeline-line horizontal"></div>
-    </div>
-    <div class="timeline-item left">
-        <img src="grafika3.jpg" alt="Projekt graficzny 5" onclick="openModal(this)" />
-        <div class="timeline-line vertical"></div>
-    </div>
-    <div class="timeline-item left">
-        <img src="grafika2.jpg" alt="Projekt graficzny 4" onclick="openModal(this)" />
-        <div class="timeline-line horizontal"></div>
-    </div>
-    <div class="timeline-item right">
-        <img src="grafika1.jpg" alt="Projekt graficzny 3" onclick="openModal(this)" />
-        <div class="timeline-line vertical"></div>
-    </div>
-    <div class="timeline-item right">
-        <img src="grafika00.jpg" alt="Projekt graficzny 2" onclick="openModal(this)" />
-        <div class="timeline-line horizontal"></div>
-    </div>
-    <div class="timeline-item left">
-        <img src="grafika0.jpg" alt="Projekt graficzny 1" onclick="openModal(this)" />
-    </div>
+   <div class="gallery">
+    <img src="grafika0.jpg" alt="Projekt graficzny 1" onclick="openModal(this)" />
+    <img src="grafika00.jpg" alt="Projekt graficzny 2" onclick="openModal(this)" />
+    <img src="grafika1.jpg" alt="Projekt graficzny 3" onclick="openModal(this)" />
+    <img src="grafika2.jpg" alt="Projekt graficzny 4" onclick="openModal(this)" />
+    <img src="grafika3.jpg" alt="Projekt graficzny 5" onclick="openModal(this)" />
+    <img src="grafika4.jpg" alt="Projekt graficzny 6" onclick="openModal(this)" />
+    <img src="grafika5.jpg" alt="Projekt graficzny 7" onclick="openModal(this)" />
+    <img src="grafika6.jpg" alt="Projekt graficzny 8" onclick="openModal(this)" />
 </div>
-
 	<div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImage" />
