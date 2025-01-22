@@ -180,16 +180,94 @@
         </p>
     </div>
 
-   <div class="gallery">
-    <img src="grafika0.jpg" alt="Projekt graficzny 1" onclick="openModal(this)" />
-    <img src="grafika00.jpg" alt="Projekt graficzny 2" onclick="openModal(this)" />
-    <img src="grafika1.jpg" alt="Projekt graficzny 3" onclick="openModal(this)" />
-    <img src="grafika2.jpg" alt="Projekt graficzny 4" onclick="openModal(this)" />
-    <img src="grafika3.jpg" alt="Projekt graficzny 5" onclick="openModal(this)" />
-    <img src="grafika4.jpg" alt="Projekt graficzny 6" onclick="openModal(this)" />
-    <img src="grafika5.jpg" alt="Projekt graficzny 7" onclick="openModal(this)" />
-    <img src="grafika6.jpg" alt="Projekt graficzny 8" onclick="openModal(this)" />
+<style>
+    .timeline {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #8fa5a2;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .timeline-item img {
+        width: 260px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        z-index: 10;
+    }
+
+    .timeline-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #8fa5a2;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+</style>
+
+<div class="timeline">
+    <div class="timeline-item">
+        <img src="grafika6.jpg" alt="Projekt graficzny 8" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika5.jpg" alt="Projekt graficzny 7" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika4.jpg" alt="Projekt graficzny 6" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika3.jpg" alt="Projekt graficzny 5" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika2.jpg" alt="Projekt graficzny 4" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika1.jpg" alt="Projekt graficzny 3" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika00.jpg" alt="Projekt graficzny 2" onclick="openModal(this)" />
+    </div>
+    <div class="timeline-item">
+        <img src="grafika0.jpg" alt="Projekt graficzny 1" onclick="openModal(this)" />
+    </div>
 </div>
+
 	<div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImage" />
